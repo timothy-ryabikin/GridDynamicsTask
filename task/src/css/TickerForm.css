@@ -1,0 +1,15 @@
+.ticker-form{
+    padding: 10px;
+    outline: 2px solid springgreen;
+    position: absolute;
+    right: 8%;
+    bottom: 16%;
+}
+
+/* .ticker-form__about{
+    display: flex;
+} */
+
+.pointer:hover{
+    cursor: pointer;
+}

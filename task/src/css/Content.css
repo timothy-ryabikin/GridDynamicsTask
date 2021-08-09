@@ -1,0 +1,42 @@
+.content{
+    outline: 2px solid tomato;
+    height: 80vh;
+}
+
+.content__item{
+    outline: 2px solid black;
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 5px 5px;	
+}
+
+.content__about{
+    padding: 20px;
+    display: flex;
+    
+    flex-wrap: wrap;
+}
+
+.content__item div:not(:last-child) {
+    margin-right: 10px;
+}
+
+i {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.increase {
+    transform: rotate(-135deg);
+}
+
+.decrease{
+    transform: rotate(45deg);
+}
+
+.nochange{
+    display: none;
+}
