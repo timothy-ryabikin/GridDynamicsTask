@@ -2,7 +2,7 @@ import Filter from './Filter'
 import './css/App.css';
 import Content from './Content';
 import TickerForm from './TickerForm';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function App() {
 
@@ -11,6 +11,12 @@ function App() {
     { id: 2, name: 'GDYN', price: "100", trend: "decrease", showDelete: true },
     { id: 3, name: 'AAPL', price: "100", trend: "nochange", showDelete: true },
   ]);
+
+  // аналогично componentDidUpdate - много раз
+  useEffect(() => {
+    console.log("APP useEffect");
+    localStorage.setItem("key", JSON.stringify(tickers))
+  });
 
   return (
     <div className="App">

@@ -1,5 +1,5 @@
 import './css/TickerForm.css';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function TickerForm(props) {
 
@@ -29,12 +29,13 @@ function TickerForm(props) {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        // const id = (tickers.length + 1);
         const id = (new Date).getTime()
         setTickers((tickers) => [
             ...tickers, { id: id, name: tickerName, price: tickerPrice, trend: tickerTrend, showDelete: showDelete }
         ])
     }
+
+
 
     return (
         <section className="ticker-form">

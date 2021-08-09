@@ -16,9 +16,19 @@ function Content(props) {
     const deleteItem = (id) => {
         if (window.confirm("Confirm deleting ticker " + `${tickers[id].name}`)) {
             tickers.splice(id, 1);
+            localStorage.setItem("key", JSON.stringify(tickers))
             setDummy({});
         }
     }
+
+    // аналогично componentDidMount - один раз
+    useEffect(() => {
+        const store = localStorage.getItem("key")
+        if (store) {
+            setTickers(JSON.parse(store))
+        }
+        console.log("componentDidMount content", store);
+    }, []);
 
     return (
         <section className="content">
