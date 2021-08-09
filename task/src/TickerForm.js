@@ -30,9 +30,9 @@ function TickerForm(props) {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        const newTicker = { id: '4', name: 'SPCE', price: "100", trend: "increase" };
+        const id = "ticker" + (tickers.length + 1);
         setTickers((tickers) => [
-            ...tickers, { id: '4', name: tickerName, price: tickerPrice, trend: tickerTrend }
+            ...tickers, { id: id, name: tickerName, price: tickerPrice, trend: tickerTrend }
         ])
     }
 
@@ -42,10 +42,10 @@ function TickerForm(props) {
                 <div className="ticker-form__about">
                     <form onSubmit={handleSubmit}>
                         <div className="ticker-form__input">
-                            <input type="text" placeholder="Enter ticker name..." value={tickerName} onChange={handleChangeName} />
+                            <input type="text" placeholder="Enter ticker name..." value={tickerName} onChange={handleChangeName} required />
                         </div>
                         <div className="ticker-form__input">
-                            <input type="text" placeholder="Enter price..." value={tickerPrice} onChange={handleChangePrice} />
+                            <input type="text" placeholder="Enter price..." value={tickerPrice} onChange={handleChangePrice} required />
                         </div>
                         <div className="ticker-form__input">
                             <select name="select" onChange={handleChangeTrend}>
