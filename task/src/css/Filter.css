@@ -1,6 +1,5 @@
-.filter{
-    outline: 2px solid violet;
-    
+.filterContent{
+    outline: 2px solid darkcyan;   
 }
 
 .filter__search-field{

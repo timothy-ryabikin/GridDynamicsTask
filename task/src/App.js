@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div className="App">
-      <Filter></Filter>
+      <Filter tickers={tickers} setTickers={setTickers}></Filter>
       <Content tickers={tickers} setTickers={setTickers}></Content>
       <TickerForm tickers={tickers} setTickers={setTickers}></TickerForm>
     </div>
