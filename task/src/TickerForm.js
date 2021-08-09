@@ -11,7 +11,7 @@ function TickerForm(props) {
 
     const [tickerPrice, setTickerPrice] = useState("");
 
-    const [tickerTrend, setTickerTrend] = useState("");
+    const [tickerTrend, setTickerTrend] = useState("increase");
 
     const handleChangeName = (e) => {
         setTickerName(e.target.value)
@@ -27,13 +27,6 @@ function TickerForm(props) {
         setTickerTrend(e.target.value)
         console.log("tickerTrend = " + tickerTrend);
     }
-
-    // const handleAddNewTicker = (newText) => {
-    //     setTickers((currentMessageList) => [
-    //         ...currentMessageList,
-    //         { author: AUTHORS.ME, text: newText },
-    //     ])
-    // }
 
     const handleSubmit = (e) => {
         e.preventDefault()
