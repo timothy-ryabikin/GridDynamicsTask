@@ -7,6 +7,8 @@ function TickerForm(props) {
 
     const [showForm, setShowForm] = useState(false);
 
+    const [showDelete, setShowDelete] = useState(true);
+
     const [tickerName, setTickerName] = useState("");
 
     const [tickerPrice, setTickerPrice] = useState("");
@@ -15,24 +17,22 @@ function TickerForm(props) {
 
     const handleChangeName = (e) => {
         setTickerName(e.target.value)
-        console.log("tickerName = " + tickerName);
     }
 
     const handleChangePrice = (e) => {
         setTickerPrice(e.target.value)
-        console.log("tickerPrice = " + tickerPrice);
     }
 
     const handleChangeTrend = (e) => {
         setTickerTrend(e.target.value)
-        console.log("tickerTrend = " + tickerTrend);
     }
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        const id = "ticker" + (tickers.length + 1);
+        // const id = (tickers.length + 1);
+        const id = (new Date).getTime()
         setTickers((tickers) => [
-            ...tickers, { id: id, name: tickerName, price: tickerPrice, trend: tickerTrend }
+            ...tickers, { id: id, name: tickerName, price: tickerPrice, trend: tickerTrend, showDelete: showDelete }
         ])
     }
 

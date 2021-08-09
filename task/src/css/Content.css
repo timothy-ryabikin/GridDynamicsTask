@@ -11,6 +11,11 @@
     box-shadow: 5px 5px;	
 }
 
+.content__item:hover{
+    transition: all 0.25s;
+    transform: scale(1.1);
+}
+
 .content__about{
     padding: 20px;
     display: flex;

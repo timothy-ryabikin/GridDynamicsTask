@@ -7,15 +7,15 @@ import { useState } from 'react';
 function App() {
 
   const [tickers, setTickers] = useState([
-    { id: 'ticker1', name: 'SPCE', price: "100", trend: "increase" },
-    { id: 'ticker2', name: 'GDYN', price: "100", trend: "decrease" },
-    { id: 'ticker3', name: 'AAPL', price: "100", trend: "nochange" },
+    { id: 1, name: 'SPCE', price: "100", trend: "increase", showDelete: true },
+    { id: 2, name: 'GDYN', price: "100", trend: "decrease", showDelete: true },
+    { id: 3, name: 'AAPL', price: "100", trend: "nochange", showDelete: true },
   ]);
 
   return (
     <div className="App">
       <Filter></Filter>
-      <Content tickers={tickers}></Content>
+      <Content tickers={tickers} setTickers={setTickers}></Content>
       <TickerForm tickers={tickers} setTickers={setTickers}></TickerForm>
     </div>
   );
