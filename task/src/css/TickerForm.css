@@ -1,3 +1,12 @@
+@keyframes scale-up-center {
+    0% {
+      transform: scale(0.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+   
 .ticker-form{
     padding: 10px;
     position: absolute;
@@ -11,15 +20,6 @@
     padding: 10px;
 }
 
-@keyframes scale-up-center {
-    0% {
-      transform: scale(0.5);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-   
 .ticker-form__about{
     background-color: wheat;
     outline: 2px solid black;
@@ -28,12 +28,6 @@
     animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
-.hide{
-    visibility: hidden;
-    opacity: 0;
-    filter: alpha(opacity=0);
-    transform: translateX(100%);
-}
 
 .ticker-form__input input{
     border-radius: 10px;
@@ -50,7 +44,7 @@
     transition: all 0.25s;
     transform: scale(1.1);
     background-color:plum;
-    }
+}
     
 .pointer:hover{
     cursor: pointer;
@@ -60,13 +54,13 @@
     align-self:flex-end;
 }
 
-.button-show-ticker:hover .cls-1{
+.button-show-ticker:hover .button-show-ticker__item{
     transition: all 0.25s;
     transform: scale(1.1);
     stroke:green;
 }
 
-.cls-1{
+.button-show-ticker__item{
     fill:none;
     stroke:#000;
     stroke-linecap:round;

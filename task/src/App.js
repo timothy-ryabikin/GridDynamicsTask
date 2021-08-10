@@ -22,7 +22,7 @@ function App() {
     <div className="App">
       <Filter tickers={tickers} setTickers={setTickers} filteredTickers={filteredTickers} setFilteredTickers={setFilteredTickers}></Filter>
       <Content tickers={tickers} setTickers={setTickers} filteredTickers={filteredTickers} ></Content>
-      <TickerForm tickers={tickers} setTickers={setTickers}></TickerForm>
+      <TickerForm setTickers={setTickers}></TickerForm>
     </div>
   );
 }

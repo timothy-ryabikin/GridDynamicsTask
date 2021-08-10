@@ -22,12 +22,6 @@ function Content(props) {
         }
     }, []);
 
-    // const changeShowDelete = (id) => {
-    //     console.log("changeShowDelete id = " + id);
-    //     tickers[id].showDelete = !tickers[id].showDelete;
-    //     setDummy({});
-    // }
-
     return (
         <section className="content">
             <div className="content__about">
