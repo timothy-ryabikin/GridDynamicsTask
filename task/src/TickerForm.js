@@ -66,8 +66,8 @@ function TickerForm(props) {
                     value={showForm}
                     onChange={() => setShowForm(!showForm)}
                 />
-                <label for="showform" className="pointer">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="23"><defs></defs><title>Add ticker</title><g id="_8.add" data-name="8.add"><circle class="cls-1" cx="12" cy="12" r="11" /><line class="cls-1" x1="12" y1="6" x2="12" y2="18" /><line class="cls-1" x1="18" y1="12" x2="6" y2="12" /></g></svg>
+                <label for="showform" className=" pointer">
+                    <svg className="button-show-ticker__about" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="23"><defs></defs><title>Add ticker</title><g id="_8.add" data-name="8.add"><circle class="cls-1" cx="12" cy="12" r="11" /><line class="cls-1" x1="12" y1="6" x2="12" y2="18" /><line class="cls-1" x1="18" y1="12" x2="6" y2="12" /></g></svg>
                 </label>
             </div>
 

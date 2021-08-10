@@ -42,12 +42,6 @@ function Content(props) {
                             </div>}
                     </div>
                 ))}
-                {/* {tickers.map((name, id) => (
-
-                    tickers[id].showDelete && <div className="delete-ticker-button">
-                        <button onClick={() => deleteItem(id)}>Delete</button>
-                    </div>
-                ))} */}
             </div>
         </section >
     )
