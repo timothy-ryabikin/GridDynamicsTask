@@ -1,0 +1,29 @@
+
+.filter__search-field{
+    border-radius: 20px;
+    padding: 10px 10px 10px 50px;
+    width: 100%;
+    outline: none;
+    margin: 20px 0 20px 0;
+    font-size: 15px;
+    
+}
+
+.filter__search-field:focus{
+    transition: all 0.5s;
+    background-color: thistle;
+}
+
+.show-filter{
+    display: none;
+}
+
+.filterContent__about{
+    position: relative;
+}
+
+.filterContent__search-svg{
+    position: absolute;
+    left: 20px;
+    top: 27px;
+}

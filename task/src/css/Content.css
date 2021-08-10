@@ -1,0 +1,75 @@
+@keyframes scale-up-bl {
+    0% {
+        transform: scale(0.5);
+        transform-origin: 0% 100%;
+    }
+    100% {
+        transform: scale(1);
+        transform-origin: 0% 100%;
+    }
+  }
+
+.content{
+    outline: 2px solid black;
+    background-color: lightblue;
+    box-shadow: 10px 5px;
+    height: 80vh;
+}
+
+.content__item{
+    outline: 2px solid black;
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 5px 5px;
+    background-color: rgb(191, 184, 206);
+    animation: scale-up-bl 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+
+}
+
+.content__item:hover{
+    cursor: default;
+    transition: all 0.25s;
+    background-color:moccasin;
+}
+
+.delete-ticker-button button{
+    outline: none;
+    border-radius: 10px;
+}
+
+.delete-ticker-button button:hover{
+    transition: all 0.25s;
+    transform: scale(1.1);
+    background-color:plum;
+}
+
+.content__about{
+    padding: 20px;
+    display: flex;
+    
+    flex-wrap: wrap;
+}
+
+.content__item div:not(:last-child) {
+    margin-right: 10px;
+}
+
+i{
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.increase {
+    transform: rotate(-135deg);
+}
+
+.decrease{
+    transform: rotate(45deg);
+    
+}
+.nochange{
+    display: none;
+}
