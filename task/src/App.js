@@ -2,7 +2,7 @@ import Filter from './Filter'
 import './css/App.css';
 import Content from './Content';
 import TickerForm from './TickerForm';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function App() {
 
