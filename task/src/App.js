@@ -12,16 +12,16 @@ function App() {
     { id: 3, name: 'AAPL', price: "100", trend: "nochange", showDelete: true },
   ]);
 
-  // аналогично componentDidUpdate - много раз
+  const [filteredTickers, setFilteredTickers] = useState([]);
+
   useEffect(() => {
-    console.log("APP useEffect");
     localStorage.setItem("key", JSON.stringify(tickers))
   });
 
   return (
     <div className="App">
-      <Filter tickers={tickers} setTickers={setTickers}></Filter>
-      <Content tickers={tickers} setTickers={setTickers}></Content>
+      <Filter tickers={tickers} setTickers={setTickers} filteredTickers={filteredTickers} setFilteredTickers={setFilteredTickers}></Filter>
+      <Content tickers={tickers} setTickers={setTickers} filteredTickers={filteredTickers} ></Content>
       <TickerForm tickers={tickers} setTickers={setTickers}></TickerForm>
     </div>
   );

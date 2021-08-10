@@ -3,15 +3,9 @@ import { useState, useEffect } from "react";
 
 function Content(props) {
 
-    const { tickers, setTickers } = props;
+    const { tickers, setTickers, filteredTickers, setFilteredTickers } = props;
 
     const [dummy, setDummy] = useState();
-
-    // const changeShowDelete = (id) => {
-    //     console.log("changeShowDelete id = " + id);
-    //     tickers[id].showDelete = !tickers[id].showDelete;
-    //     setDummy({});
-    // }
 
     const deleteItem = (id) => {
         if (window.confirm("Confirm deleting ticker " + `${tickers[id].name}`)) {
@@ -21,14 +15,18 @@ function Content(props) {
         }
     }
 
-    // аналогично componentDidMount - один раз
     useEffect(() => {
         const store = localStorage.getItem("key")
         if (store) {
             setTickers(JSON.parse(store))
         }
-        console.log("componentDidMount content", store);
     }, []);
+
+    // const changeShowDelete = (id) => {
+    //     console.log("changeShowDelete id = " + id);
+    //     tickers[id].showDelete = !tickers[id].showDelete;
+    //     setDummy({});
+    // }
 
     return (
         <section className="content">

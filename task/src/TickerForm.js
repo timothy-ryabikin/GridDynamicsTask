@@ -35,8 +35,6 @@ function TickerForm(props) {
         ])
     }
 
-
-
     return (
         <section className="ticker-form">
             {showForm &&
@@ -56,22 +54,23 @@ function TickerForm(props) {
                             </select>
                         </div>
                         <div className="ticker-form__input">
-                            <input type="submit" value="+" />
+                            <input type="submit" value="Add ticker" className="tikcer-form__add-ticker pointer" />
                         </div>
                     </form>
                 </div>}
-            <div>
-                <div className="pointer">
-                    <input className="pointer"
-                        id="showform"
-                        type="checkbox"
-                        checked={showForm}
-                        value={showForm}
-                        onChange={() => setShowForm(!showForm)}
-                    />
-                    <label className="pointer" for="showform">Show form</label>
-                </div>
+            <div className="button-show-ticker">
+                <input className="pointer show-filter"
+                    id="showform"
+                    type="checkbox"
+                    checked={showForm}
+                    value={showForm}
+                    onChange={() => setShowForm(!showForm)}
+                />
+                <label for="showform" className="pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="23"><defs></defs><title>Add ticker</title><g id="_8.add" data-name="8.add"><circle class="cls-1" cx="12" cy="12" r="11" /><line class="cls-1" x1="12" y1="6" x2="12" y2="18" /><line class="cls-1" x1="18" y1="12" x2="6" y2="12" /></g></svg>
+                </label>
             </div>
+
         </section >
     )
 }
