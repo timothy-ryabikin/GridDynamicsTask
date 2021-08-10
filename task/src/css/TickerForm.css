@@ -60,6 +60,12 @@
     stroke:green;
 }
 
+.button-show-ticker:active .button-show-ticker__item{
+    transition: all 0.25s;
+    transform: scale(1.1);
+    stroke:white;
+}
+
 .button-show-ticker__item{
     fill:none;
     stroke:#000;

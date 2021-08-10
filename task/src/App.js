@@ -12,7 +12,7 @@ function App() {
     { id: 3, name: 'AAPL', price: "100", trend: "nochange", showDelete: true },
   ]);
 
-  const [filteredTickers, setFilteredTickers] = useState([]);
+  const [filteredTickers, setFilteredTickers] = useState(tickers);
 
   useEffect(() => {
     localStorage.setItem("key", JSON.stringify(tickers))
@@ -22,7 +22,7 @@ function App() {
     <div className="App">
       <Filter tickers={tickers} setTickers={setTickers} filteredTickers={filteredTickers} setFilteredTickers={setFilteredTickers}></Filter>
       <Content tickers={tickers} setTickers={setTickers} filteredTickers={filteredTickers} ></Content>
-      <TickerForm setTickers={setTickers}></TickerForm>
+      <TickerForm setTickers={setTickers} filteredTickers={filteredTickers} setFilteredTickers={setFilteredTickers}></TickerForm>
     </div>
   );
 }

@@ -70,7 +70,6 @@ function TickerForm(props) {
                     <svg className="button-show-ticker__about" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 27" width="50" height="50"><defs></defs><title>Add ticker</title><g id="_8.add" data-name="8.add"><circle className="button-show-ticker__item" cx="12" cy="12" r="11" /><line class="button-show-ticker__item" x1="12" y1="6" x2="12" y2="18" /><line class="button-show-ticker__item" x1="18" y1="12" x2="6" y2="12" /></g></svg>
                 </label>
             </div>
-
         </section >
     )
 }
