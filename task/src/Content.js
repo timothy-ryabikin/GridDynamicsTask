@@ -10,6 +10,7 @@ function Content(props) {
     const deleteItem = (id) => {
         if (window.confirm("Confirm deleting ticker " + `${tickers[id].name}`)) {
             tickers.splice(id, 1);
+            filteredTickers.splice(id, 1);
             localStorage.setItem("key", JSON.stringify(tickers))
             setDummy({});
         }
@@ -19,18 +20,19 @@ function Content(props) {
         const store = localStorage.getItem("key")
         if (store) {
             setTickers(JSON.parse(store))
+            setFilteredTickers(JSON.parse(store))
         }
     }, []);
 
     return (
         <section className="content">
             <div className="content__about">
-                {tickers.map((name, id) => (
-                    <div key={id} className="content__item" id={`${tickers[id].id}`} >
-                        <div>{tickers[id].name}</div>
-                        <div>&#36;{tickers[id].price}</div>
-                        <div><i className={`${tickers[id].trend}`}></i></div>
-                        {tickers[id].showDelete &&
+                {filteredTickers.map((name, id) => (
+                    <div key={id} className="content__item" id={`${filteredTickers[id].id}`} >
+                        <div>{filteredTickers[id].name}</div>
+                        <div>&#36;{filteredTickers[id].price}</div>
+                        <div><i className={`${filteredTickers[id].trend}`}></i></div>
+                        {filteredTickers[id].showDelete &&
                             <div className="delete-ticker-button">
                                 <button className="pointer" onClick={() => deleteItem(id)}>Delete</button>
                             </div>}

@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 function TickerForm(props) {
 
-    const { setTickers } = props;
+    const { setTickers, filteredTickers, setFilteredTickers } = props;
 
     const [showForm, setShowForm] = useState(false);
 
@@ -33,6 +33,10 @@ function TickerForm(props) {
         setTickers((tickers) => [
             ...tickers, { id: id, name: tickerName, price: tickerPrice, trend: tickerTrend, showDelete: showDelete }
         ])
+        setFilteredTickers((tickers) => [
+            ...tickers, { id: id, name: tickerName, price: tickerPrice, trend: tickerTrend, showDelete: showDelete }
+        ])
+
     }
 
     return (

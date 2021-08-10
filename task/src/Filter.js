@@ -32,9 +32,9 @@ function Filter(props) {
     const filterContent = (e) => {
         e.preventDefault();
         const regexp = new RegExp(search, 'i');
-        const newArr = tickers.filter(ticker => regexp.test(ticker.name));
+        const newArr = filteredTickers.filter(ticker => regexp.test(ticker.name));
         console.log(newArr);
-        setTickers(newArr);
+        setFilteredTickers(newArr);
     }
 
     return (
