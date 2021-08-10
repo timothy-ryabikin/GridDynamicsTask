@@ -63,7 +63,7 @@
 .button-show-ticker:hover .cls-1{
     transition: all 0.25s;
     transform: scale(1.1);
-    stroke:forestgreen;
+    stroke:green;
 }
 
 .cls-1{
