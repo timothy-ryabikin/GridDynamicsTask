@@ -8,9 +8,11 @@ function App() {
 
   const [tickers, setTickers] = useState([
     //commet below to wirk with empty collection
+    //*
     { id: 1, name: 'SPCE', price: "100", trend: "increase", showDelete: true },
     { id: 2, name: 'GDYN', price: "100", trend: "decrease", showDelete: true },
     { id: 3, name: 'AAPL', price: "100", trend: "nochange", showDelete: true },
+    //*
     //
   ]);
 
