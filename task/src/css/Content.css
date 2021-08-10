@@ -33,6 +33,16 @@
     background-color:moccasin;
 }
 
+.content__about{
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content__item div:not(:last-child) {
+    margin-right: 10px;
+}
+
 .delete-ticker-button button{
     outline: none;
     border-radius: 10px;
@@ -42,17 +52,6 @@
     transition: all 0.25s;
     transform: scale(1.1);
     background-color:plum;
-}
-
-.content__about{
-    padding: 20px;
-    display: flex;
-    
-    flex-wrap: wrap;
-}
-
-.content__item div:not(:last-child) {
-    margin-right: 10px;
 }
 
 i{
