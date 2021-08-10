@@ -1,14 +1,11 @@
 @keyframes scale-up-bl {
     0% {
-      -webkit-transform: scale(0.5);
               transform: scale(0.5);
-      -webkit-transform-origin: 0% 100%;
               transform-origin: 0% 100%;
     }
     100% {
-      -webkit-transform: scale(1);
+
               transform: scale(1);
-      -webkit-transform-origin: 0% 100%;
               transform-origin: 0% 100%;
     }
   }
@@ -23,14 +20,16 @@
     display: flex;
     padding: 10px;
     margin: 10px;
-    box-shadow: 5px 5px;	
+    box-shadow: 5px 5px;
+    background-color: rgb(191, 184, 206);
     animation: scale-up-bl 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 
 }
 
 .content__item:hover{
+    cursor: default;
     transition: all 0.25s;
-    transform: scale(1.1);
+    background-color:moccasin;
 }
 
 .delete-ticker-button button{
@@ -68,8 +67,8 @@ i{
 
 .decrease{
     transform: rotate(45deg);
+    
 }
-
 .nochange{
     display: none;
 }
